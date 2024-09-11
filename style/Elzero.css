@@ -49,6 +49,79 @@ li {
     width: 1140px;
   }
 }
+/* start main-title */
+.main-title {
+  margin: 100px auto;
+  border: solid 1px black;
+  padding: 10px 20px;
+  width: fit-content;
+  font-size: 30px;
+  position: relative;
+  z-index: 1;
+  cursor: default;
+}
+.main-title::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+}
+.main-title::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+}
+.main-title:hover {
+  color: white;
+  border: solid white 2px;
+  transition-delay: 0.5s;
+}
+.main-title:hover::before {
+  animation: left-move 0.5s linear forwards;
+  z-index: -1;
+}
+.main-title:hover::after {
+  animation: right-move 0.5s linear forwards;
+  z-index: -1;
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0px;
+    height: 100%;
+    width: 50%;
+  }
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    height: 12px;
+    width: 12px;
+  }
+  100% {
+    left: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: 0px;
+  }
+}
+/* end main-title */
 /* end global rules */
 /* header section */
 header {
