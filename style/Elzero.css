@@ -638,3 +638,88 @@ header .container .navbar .link:hover + .mega-menu {
   right: -10px;
 }
 /* end testimonials section */
+/* START TEAM MEMBERS */
+.team-members {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.members .box {
+  position: relative;
+  overflow: hidden;
+  transition: var(--main-transition);
+}
+.members .box::after,
+.members .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 10px;
+}
+.members .box::before {
+  width: 85%;
+  background-color: #f2f3f2;
+  z-index: -2;
+}
+.members .box::after {
+  width: 0%;
+  z-index: -1;
+  background-color: #e4e4e4;
+  transition: var(--main-transition);
+}
+.members .box:hover {
+  transition: var(--main-transition);
+  filter: grayscale(1);
+}
+.members .box:hover::after {
+  transition: var(--main-transition);
+  width: 85%;
+}
+@media (max-width: 768px) {
+  .members .box::before {
+    width: 90%;
+  }
+  .members .box:hover::after {
+    width: 90%;
+  }
+}
+.members .box .data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  gap: 20px;
+}
+.members .box .data .social {
+  flex-basis: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.members .box .data img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.members .box .data i {
+  display: block;
+  color: var(--clr-secondary);
+  cursor: pointer;
+}
+.members .box .info {
+  padding-left: 80px;
+}
+.members .box .info h3 {
+  color: var(--clr-primary);
+  margin-top: 22px;
+  font-size: 22px;
+}
+.members .box .info p {
+  margin: 10px 0px 25px;
+}
+/* END TEAM MEMBERS */
