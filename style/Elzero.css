@@ -866,3 +866,73 @@ header .container .navbar .link:hover + .mega-menu {
   background-color: var(--clr-primary);
 }
 /* END SKILLS SECTION */
+/* START WORK SECTION */
+.work {
+  padding: var(--main-padding-top) 0px var(--main-padding-bottom) 0px;
+  background-color: var(--bg-gray);
+}
+.work .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 992px) {
+  .work .info {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+.work .info img {
+  max-width: 100%;
+}
+.work-info .box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: solid white 2px;
+  border-radius: 6px;
+  background-color: #f6f5f5;
+  position: relative;
+  z-index: 1;
+}
+.work-info .box::before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-gray);
+  z-index: -1;
+  transition: var(--main-transition);
+  opacity: 0;
+}
+.work-info .box:hover::before {
+  height: 100%;
+  width: 100%;
+  transition: var(--main-transition);
+  opacity: 1;
+}
+.work-info .box img {
+  width: 64px;
+}
+.work .info .image {
+  text-align: center;
+}
+.work .info .image,
+.work .info .work-info {
+  flex-basis: 50%;
+}
+.work-info .box .text h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.work-info .box .text p {
+  color: var(--clr-secondary);
+  line-height: 1.7;
+  font-size: 18px;
+}
+/* END WORK SECTION */
