@@ -1048,3 +1048,128 @@ header .container .navbar .link:hover + .mega-menu {
   }
 }
 /* END EVENTS SECTION */
+/* START PRICING SECTION */
+.pricing {
+  padding: var(--main-padding-top) 0px var(--main-padding-bottom) 0px;
+  background-color: var(--bg-gray);
+}
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.plans .box {
+  background-color: white;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  transition: var(--main-transition);
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+}
+.plans .box::before,
+.plans .box::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: var(--main-transition);
+  background-color: #f6f5f5;
+}
+.plans .box::before {
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 50%;
+}
+.plans .box::after {
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 50%;
+}
+.plans .box:hover::after,
+.plans .box:hover::before {
+  transition: var(--main-transition);
+  width: 100%;
+}
+.plans .box:nth-of-type(2) {
+  transform: translateY(-20px);
+}
+.plans .box .title {
+  font-size: 25px;
+  margin: 30px 0px;
+  font-weight: bold;
+}
+.plans .box .price {
+  color: var(--clr-primary);
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.plans .box span {
+  color: var(--clr-secondary);
+  font-size: 16px;
+}
+.plans .box img {
+  width: 80px;
+  margin-bottom: 30px;
+}
+.plans .box .info ul {
+  margin: 20px 0px;
+  text-align: left;
+}
+.plans .box .info ul li {
+  border-top: solid 0.5px #eee;
+  padding: 20px;
+  font-size: 16px;
+}
+.plans .box .info ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  color: var(--clr-primary);
+  font-weight: 900;
+  margin-right: 10px;
+}
+.plans .box a {
+  padding: 15px 20px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto 40px;
+  color: var(--clr-primary);
+  background-color: white;
+  border: solid 2px var(--clr-primary);
+  border-radius: 6px;
+  font-weight: bold;
+  transition: var(--main-transition);
+}
+.plans .box a:hover {
+  transition: var(--main-transition);
+  background-color: var(--clr-primary);
+  color: white;
+}
+.plans .box .label {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: var(--clr-primary);
+  writing-mode: vertical-lr;
+  padding: 10px 10px 35px;
+}
+.plans .box .label::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  transform: translateX(10px);
+  border-style: solid;
+  border-width: 20px;
+  border-color: transparent transparent white transparent;
+}
+@media (max-width: 768px) {
+  .plans {
+    gap: 60px;
+  }
+}
+/* END PRICING SECTION */
