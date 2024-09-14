@@ -876,12 +876,6 @@ header .container .navbar .link:hover + .mega-menu {
   align-items: center;
   gap: 30px;
 }
-@media (max-width: 992px) {
-  .work .info {
-    flex-direction: column;
-    gap: 60px;
-  }
-}
 .work .info img {
   max-width: 100%;
 }
@@ -935,4 +929,122 @@ header .container .navbar .link:hover + .mega-menu {
   line-height: 1.7;
   font-size: 18px;
 }
+@media (max-width: 992px) {
+  .work .info {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .work-info .box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 /* END WORK SECTION */
+/* START EVENTS SECTION */
+.events {
+  padding: var(--main-padding-top) 0px var(--main-padding-bottom) 0px;
+}
+.events-info .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.events-info .info img {
+  max-width: 100%;
+}
+.events-info .info .image {
+  flex-basis: 40%;
+}
+.events-info .info .text {
+  flex: 1;
+}
+.events-info .info .text {
+  text-align: center;
+}
+.events-info .info .text h2 {
+  font-size: 30px;
+  margin-top: 40px;
+}
+.events-info .info .text p {
+  margin: 20px 0px;
+  color: var(--clr-secondary);
+  line-height: 1.7;
+  font-size: 19px;
+}
+.info .text .time {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.info .text .time .unit {
+  border: solid #d4d4d4 1px;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+.info .text .time .unit:hover {
+  transition: var(--main-transition);
+  border: solid 1px var(--clr-primary);
+}
+.info .text .time .unit span {
+  display: block;
+}
+.info .text .time .unit span:first-child {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--clr-primary);
+  padding: 15px;
+}
+.info .text .time .unit span:last-child {
+  font-size: 12px;
+  color: var(--clr-secondary);
+  padding: 8px 10px;
+  border-top: 1px solid #d4d4d4;
+}
+.events-info .subscribe {
+  margin: 40px auto 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.events-info .subscribe .form {
+  flex-basis: 50%;
+  padding: 30px 40px;
+  background-color: rgb(247, 244, 245);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.events-info .subscribe .form .email {
+  flex: 1;
+  padding: 20px;
+  border-radius: 50px;
+  caret-color: var(--clr-primary);
+  border: none;
+  outline: none;
+}
+.events-info .subscribe .form .submit {
+  padding: 20px;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  background-color: var(--clr-primary);
+  cursor: pointer;
+  border: none;
+}
+@media (max-width: 992px) {
+  .events-info .subscribe .form {
+    flex-basis: 100%;
+  }
+  .events-info .info .image {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .events-info .subscribe .form {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+/* END EVENTS SECTION */
