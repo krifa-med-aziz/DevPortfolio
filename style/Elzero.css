@@ -1316,3 +1316,85 @@ header .container .navbar .link:hover + .mega-menu {
   color: var(--clr-primary);
 }
 /* END STATS SECTION */
+/* START DISCOUNT SECTION */
+.discount {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.discount .image,
+.discount .form {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discount .image {
+  background-image: url(/Assets/discount-background1.jpg);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+.discount .discount-content::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(23, 135, 224, 97%);
+  z-index: -1;
+}
+.discount .form h2,
+.discount .discount-content h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+  margin: 30px 0px;
+}
+.discount .discount-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 18px 0px;
+}
+.discount .discount-content img {
+  width: 300px;
+  max-width: 100%;
+}
+.discount .form textarea,
+.discount .form input {
+  display: block;
+  padding: 15px;
+  margin-bottom: 25px;
+  background-color: #f8f8f9;
+  border: none;
+  border-bottom: solid 1px var(--light-gray);
+  outline: none;
+  caret-color: var(--clr-primary);
+  width: 100%;
+}
+.discount .form textarea {
+  height: 200px;
+  resize: none;
+}
+.discount .form input:last-child {
+  background-color: var(--clr-primary);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.discount .form input:last-child:hover {
+  background-color: var(--clr-primary-alt);
+  transition: var(--main-transition);
+}
+@media (max-width: 992px) {
+  .discount .image,
+  .discount .form {
+    flex-basis: 100%;
+  }
+}
+/* END DISCOUNT SECTION */
