@@ -1398,3 +1398,108 @@ header .container .navbar .link:hover + .mega-menu {
   }
 }
 /* END DISCOUNT SECTION */
+/* START FOOTER SECTION */
+footer {
+  background-color: #181918;
+}
+footer .content {
+  padding: 80px 0px;
+  color: #b9b9b9;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+footer .content .box img {
+  width: 75px;
+  max-width: 100%;
+  border: solid 2px white;
+  margin: 0px 5px 5px 0px;
+}
+footer .content .box h3 {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
+footer .content .box p {
+  font-size: 16px;
+  margin: 16px 0px;
+  line-height: 1.7;
+}
+footer .content .box .social-links i {
+  padding: 10px 15px;
+  background-color: #313030;
+  color: #b8b8b9;
+  font-size: 20px;
+  margin-right: 10px;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+footer .content .box .social-links i:nth-of-type(1):hover {
+  background-color: #1877f2;
+}
+footer .content .box .social-links i:nth-of-type(2):hover {
+  background-color: var(--clr-primary);
+}
+footer .content .box .social-links i:nth-of-type(3):hover {
+  background-color: #ff0000;
+}
+footer .content .box ul li a {
+  color: #b9b9b9;
+  padding: 15px 0px;
+  display: block;
+  position: relative;
+  transition: var(--main-transition);
+}
+footer .content .box ul li {
+  border-bottom: solid 1px #b9b9b94c;
+}
+footer .content .box ul li a:hover {
+  transition: var(--main-transition);
+  transform: translateX(10px);
+  color: white;
+}
+footer .content .box ul li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  color: var(--clr-primary);
+  margin-right: 10px;
+  font-weight: bold;
+}
+footer .content .box .col {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .content .box .col:not(:last-child) {
+  margin-bottom: 50px;
+}
+footer .content .box .col i {
+  color: var(--clr-primary);
+  font-size: 25px;
+}
+footer .content .box .col p {
+  margin: 0;
+}
+footer .developer {
+  text-align: center;
+  color: white;
+  padding: 20px 0px;
+  border-top: solid 1px var(--light-gray);
+}
+footer .developer a {
+  color: var(--clr-primary);
+  margin-left: 5px;
+}
+@media (max-width: 576px) {
+  footer .content {
+    text-align: center;
+  }
+  footer .content .box .col {
+    flex-direction: column;
+  }
+  footer .content .box ul li {
+    width: fit-content;
+    margin: auto;
+  }
+}
+/* END FOOTER SECTION */
