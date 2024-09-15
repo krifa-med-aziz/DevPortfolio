@@ -1240,3 +1240,79 @@ header .container .navbar .link:hover + .mega-menu {
   }
 }
 /* END VIDEO SECTION */
+/* START STATS SECTION */
+.stats {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-image: url(/Assets/stats.jpg);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.stats h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  position: relative;
+}
+.stats-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px;
+}
+.stats-info .box {
+  font-weight: bold;
+  padding: 30px 15px;
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+}
+.stats-info .box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  height: 0px;
+  background-color: var(--clr-primary);
+  transition: 1s;
+}
+.stats-info .box:hover::before {
+  transition: 1s;
+  height: 100%;
+}
+.stats-info .box::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 0px;
+  background-color: var(--clr-primary);
+  transition: 1s;
+}
+.stats-info .box:hover::after {
+  transition: 1s;
+  height: 100%;
+}
+.stats-info .box i {
+  font-size: 32px;
+}
+.stats-info .box p {
+  font-size: 50px;
+  margin: 10px 0px;
+}
+.stats-info .box span {
+  font-size: 20px;
+  color: var(--clr-primary);
+}
+/* END STATS SECTION */
