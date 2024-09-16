@@ -125,6 +125,38 @@ li {
   }
 }
 /* end main-title */
+/* Start spikes */
+.spikes {
+  position: relative;
+}
+.spikes::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-color: red;
+  background: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+/* end spikes */
+/* start dotes */
+.dots {
+  background-image: url(/Assets/dots.png);
+  background-repeat: no-repeat;
+  height: 186px;
+  width: 204px;
+  position: absolute;
+}
+.dots-up {
+  top: 200px;
+  right: 0;
+}
+.dots-down {
+  bottom: 200px;
+  left: 0;
+}
+/* end dotes */
 /* end global rules */
 /* header section */
 header {
@@ -197,7 +229,6 @@ header .container .navbar .link:hover + .mega-menu {
   opacity: 1;
   z-index: 100;
   top: calc(0px + 73px);
-  transition: top var(--main-transition), opacity var(--main-transition);
 }
 /* start mega menu ection */
 .mega-menu {
@@ -211,7 +242,7 @@ header .container .navbar .link:hover + .mega-menu {
   display: flex;
   gap: 40px;
   align-items: center;
-  z-index: -1;
+  z-index: 100;
   opacity: 0;
   transition: top var(--main-transition), opacity var(--main-transition);
 }
@@ -429,6 +460,7 @@ header .container .navbar .link:hover + .mega-menu {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
   background-color: var(--bg-gray);
+  position: relative;
 }
 .gallery .gallery-content {
   display: grid;
@@ -600,6 +632,7 @@ header .container .navbar .link:hover + .mega-menu {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
   background-color: var(--bg-gray);
+  position: relative;
 }
 .testimonials-info {
   display: grid;
@@ -814,6 +847,7 @@ header .container .navbar .link:hover + .mega-menu {
 .our-skills {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
+  position: relative;
 }
 .our-skills .col {
   display: flex;
@@ -942,6 +976,7 @@ header .container .navbar .link:hover + .mega-menu {
 /* END WORK SECTION */
 /* START EVENTS SECTION */
 .events {
+  position: relative;
   padding: var(--main-padding-top) 0px var(--main-padding-bottom) 0px;
 }
 .events-info .info {
@@ -1177,6 +1212,7 @@ header .container .navbar .link:hover + .mega-menu {
 .video {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
+  position: relative;
 }
 .video-info {
   display: flex;
