@@ -7,6 +7,7 @@
 body {
   font-family: "Cairo", sans-serif;
   counter-reset: services;
+  position: relative;
 }
 html {
   scroll-behavior: smooth;
@@ -161,6 +162,10 @@ li {
 /* header section */
 header {
   box-shadow: 0 0 10px #ddd;
+  width: 100%;
+  z-index: 2000;
+  top: 0;
+  left: 0;
 }
 header .container {
   display: flex;
@@ -1539,3 +1544,70 @@ footer .developer a {
   }
 }
 /* END FOOTER SECTION */
+/* START FEATURES  */
+/* scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+.ScrollUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: solid 1px white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1500;
+  font-size: 20px;
+  transition: ease 0.3s, transform 0.3s ease, opacity ease 0.3s;
+  background-color: var(--clr-primary);
+  color: white;
+}
+.ScrollUp.hide {
+  transform: translateY(80px);
+  opacity: 0;
+}
+.ScrollUp.show {
+  transform: translateY(0px);
+  opacity: 1;
+} */
+.ScrollUp {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 150;
+  font-size: 15px;
+  height: 24px;
+  padding: 20px 15px;
+  border-radius: 50%;
+  bottom: 30px;
+  right: 30px;
+  color: white;
+  background-color: var(--clr-primary);
+  transition: ease 0.3s, transform 0.3s ease, opacity ease 0.3s;
+}
+
+.ScrollUp.hide {
+  transform: translateY(80px);
+  opacity: 0;
+}
+.ScrollUp.show {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.scrollToTop {
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+}
+.section {
+  transition: all 1s;
+}
+.section__hidden {
+  opacity: 0;
+  transform: translateY(80px);
+}
+/* END FEATURES  */
